@@ -1,0 +1,26 @@
+<script setup>
+import { ref, defineProps } from "vue";
+
+const props = defineProps({
+  center: {
+    type: Boolean,
+  },
+  gap
+});
+</script>
+
+<template>
+  <div class="flex" :class="{ center: props.center }" :style="{}">
+    <slot></slot>
+  </div>
+</template>
+
+<style scoped>
+.flex {
+  display: flex;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+</style>

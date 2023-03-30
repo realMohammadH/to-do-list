@@ -1,0 +1,47 @@
+<script setup>
+import { ref, defineProps } from "vue";
+
+const props = defineProps({
+  center: {
+    type: Boolean,
+  },
+  gap: {
+    type: String,
+  },
+  flow: {
+    type: String,
+  },
+  alignItems: {
+    type: String,
+  },
+  justifyContent: {
+    type: String,
+  },
+  flexG
+});
+</script>
+
+<template>
+  <div
+    class="flex"
+    :class="{ center: props.center }"
+    :style="{
+      gap: props.gap,
+      flexDirection: props.flow,
+      alignItems: props.alignItems,
+      justifyContent: props.justifyContent,
+    }"
+  >
+    <slot></slot>
+  </div>
+</template>
+
+<style scoped>
+.flex {
+  display: flex;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+</style>

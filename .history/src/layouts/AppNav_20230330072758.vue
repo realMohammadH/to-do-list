@@ -1,0 +1,40 @@
+<script setup>
+import { ref } from "vue";
+import AddButton from "./../components/ui/AddButton.vue";
+import AnalysisButton from "./../components/ui/AnalysisButton.vue";
+import HomeButton from "./../components/ui/HomeButton.vue";
+import TasksButton from "../components/ui/TasksButton.vue";
+</script>
+
+<template>
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <add-button></add-button>
+        <home-button></home-button>
+        
+        <analysis-button></analysis-button>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<style scoped>
+header {
+  background-color: #db4c3f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+nav {
+  padding: 10px 20px;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+</style>

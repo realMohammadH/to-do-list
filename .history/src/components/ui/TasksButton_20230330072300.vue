@@ -1,0 +1,45 @@
+<script setup>
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+
+</script>
+
+<template>
+  <button type="button" class="tasks-btn" @click="goTasks()">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#ffffff"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M8 8H16M8 12H16M10 16H14M3.5 12C3.5 5.5 5.5 3.5 12 3.5C18.5 3.5 20.5 5.5 20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12Z"
+          stroke="#ffffff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </g>
+    </svg>
+  </button>
+</template>
+
+<style scoped>
+.tasks-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.tasks-btn:hover {
+  background-color: #ffffff33;
+}
+</style>
